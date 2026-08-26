@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Payment</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;padding:20px;color:#222}
+.box{max-width:500px;margin:30px auto;background:white;padding:25px;border-radius:10px;box-shadow:0 2px 10px #0002}
+h1{margin-top:0}
+label{display:block;font-weight:bold;margin-top:15px}
+input{width:100%;padding:12px;margin-top:6px;box-sizing:border-box;border:1px solid #aaa;border-radius:5px}
+button{width:100%;padding:13px;margin-top:20px;background:#c65320;color:white;border:0;border-radius:5px;font-weight:bold}
+.notice{background:#fff4ef;padding:12px;margin-bottom:20px;border-left:4px solid #c65320;font-size:14px}
+#result{display:none;margin-top:20px;padding:15px;background:#edf7ee;border:1px solid #8bad8d}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Practice Payment</h1>
 
+<div class="notice">
+<strong>Demo only.</strong><br>
+Use test information only. Do not enter a real card number, bank account number, PIN, or security code.
+</div>
+
+<label>Name</label>
+<input type="text" placeholder="Test Student">
+
+<label>Test Card Number</label>
+<input type="text" maxlength="19" placeholder="4111 1111 1111 1111">
+
+<label>Expiration Date</label>
+<input type="text" maxlength="5" placeholder="12/30">
+
+<label>Test Security Code</label>
+<input type="text" maxlength="4" placeholder="123">
+
+<button onclick="demoPayment()">Submit Practice Payment</button>
+
+<div id="result">
+<strong>Practice payment submitted!</strong><br><br>
+No real payment was made and no payment information was sent anywhere.
+</div>
+</div>
+
+<script>
+function demoPayment(){
+document.getElementById("result").style.display="block";
+}
+</script>
+</body>
+</html>
